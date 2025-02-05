@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test:db": "ts-node --project tsconfig.json src/scripts/test-db.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.48.1",
@@ -24,6 +25,7 @@
     "eslint-config-next": "15.1.5",
     "postcss": "^8.5.1",
     "tailwindcss": "^3.4.17",
+    "ts-node": "^10.9.2",
     "typescript": "^5"
   }
 }

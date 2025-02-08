@@ -4,9 +4,14 @@ import { createClient } from '@supabase/supabase-js';
 console.log('process.env.SUPABASE_URL:', JSON.stringify(process.env.SUPABASE_URL));
 console.log('process.env.SUPABASE_ANON_KEY:', JSON.stringify(process.env.SUPABASE_ANON_KEY));
 
-const supabaseUrl =
-  process.env.SUPABASE_URL?.trim() || 'https://nahgmxgnnrphqrxudhme.supabase.co';
-const supabaseAnonKey =
-  process.env.SUPABASE_ANON_KEY?.trim() || 'Your_Default_Anon_Key';
+if (!process.env.SUPABASE_URL) {
+  throw new Error('Missing env.SUPABASE_URL');
+}
+if (!process.env.SUPABASE_ANON_KEY) {
+  throw new Error('Missing env.SUPABASE_ANON_KEY');
+}
 
-export const supabaseServerClient = createClient(supabaseUrl, supabaseAnonKey); 
+export const supabaseServerClient = createClient(
+  process.env.SUPABASE_URL,
+  process.env.SUPABASE_ANON_KEY
+); 

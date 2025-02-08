@@ -5,9 +5,8 @@ export async function GET() {
   try {
     // Query each table for row count
     const {
-      data: styleGuidesData,
       count: styleGuidesCount,
-      error: styleGuidesError
+      error: styleGuidesError,
     } = await supabaseServerClient
       .from('style_guides')
       .select('*', { count: 'exact', head: true });
@@ -18,9 +17,8 @@ export async function GET() {
     }
 
     const {
-      data: audienceGuidesData,
       count: audienceGuidesCount,
-      error: audienceGuidesError
+      error: audienceGuidesError,
     } = await supabaseServerClient
       .from('audience_guides')
       .select('*', { count: 'exact', head: true });
@@ -30,9 +28,8 @@ export async function GET() {
     }
 
     const {
-      data: templatesData,
       count: templatesCount,
-      error: templatesError
+      error: templatesError,
     } = await supabaseServerClient
       .from('templates')
       .select('*', { count: 'exact', head: true });
@@ -42,9 +39,8 @@ export async function GET() {
     }
 
     const {
-      data: patternsData,
       count: patternsCount,
-      error: patternsError
+      error: patternsError,
     } = await supabaseServerClient
       .from('editing_patterns')
       .select('*', { count: 'exact', head: true });

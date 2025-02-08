@@ -10,6 +10,7 @@
     "test:db": "ts-node --project tsconfig.json src/scripts/test-db.ts"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.36.3",
     "@supabase/supabase-js": "^2.48.1",
     "dotenv": "^16.4.7",
     "next": "^13.0.0",

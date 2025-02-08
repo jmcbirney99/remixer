@@ -5,7 +5,7 @@ The Dynamic Writing System is an AI-augmented writing tool that implements the "
 
 ## Core Concept
 This system enhances LLM interactions by providing clear context through four key components:
-- Content structuring
+- Content conceptualization 
 - Style guidance
 - Template frameworks
 - Audience understanding
